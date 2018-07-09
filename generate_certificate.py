@@ -80,7 +80,7 @@ class GenerateCertificate(object):
         req.sign(self.pkey, self.DIGEST)
         return req
 
-    def _gen_cert(self, ca_pass=self.CA_PASS):
+    def _gen_cert(self, ca_pass=CA_PASS):
         """generate a certificate from the csr"""
 
         ca_cert = crypto.load_certificate(crypto.FILETYPE_PEM, open(self.CA_CRT, 'rb').read())
